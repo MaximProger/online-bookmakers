@@ -65,55 +65,34 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   });
 
-  // Кнопки в интро
-  const introBtns = document.querySelectorAll(".header__intro__button");
-  introBtns.forEach((introBtn) => {
-    introBtn.addEventListener("click", (evt) => {
-      evt.preventDefault();
-      introBtn.classList.toggle("header__intro__button--active");
-    });
-  });
-
   // Навигация
-  navItems.forEach((navItem) => {
-    navItem.addEventListener("click", (evt) => {
-      evt.preventDefault;
+  function maskOpen() {
+    mask.classList.add("mask--active");
+  }
 
-      navInner.classList.remove("header__intro__nav--active");
-      burgerBtn.classList.remove("header__burger--active");
-
-      let isActive = false;
-
-      if (navItem.classList.contains("header__nav__item--active")) {
-        isActive = true;
-      }
-
-      closeAll(navItems);
-      mask.classList.remove("mask--active");
-
-      if (isActive) {
-        navItem.classList.remove("header__nav__item--active");
-
-        if (headerNav.classList.contains("header__nav--scroll")) {
-          mask.classList.remove("mask--active");
-        }
-      } else {
-        navItem.classList.add("header__nav__item--active");
-
-        if (headerNav.classList.contains("header__nav--scroll")) {
-          mask.classList.add("mask--active");
-        }
-      }
-    });
-  });
+  function maskHide() {
+    mask.classList.remove("mask--active");
+  }
 
   document.addEventListener("scroll", () => {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > windowH) {
       headerNav.classList.add("header__nav--scroll");
+
+      navItems.forEach((navItem) => {
+        navItem.addEventListener("mouseover", maskOpen);
+
+        navItem.addEventListener("mouseout", maskHide);
+      });
     } else {
       headerNav.classList.remove("header__nav--scroll");
+
+      navItems.forEach((navItem) => {
+        navItem.removeEventListener("mouseover", maskOpen);
+
+        navItem.removeEventListener("mouseout", maskHide);
+      });
     }
   });
 
@@ -154,6 +133,20 @@ document.addEventListener("DOMContentLoaded", function (event) {
     if (!searchInput.value) {
       searchHints.classList.remove("search__hints--active");
     }
+  });
+
+  function findAncestor(el, cls) {
+    while ((el = el.parentElement) && !el.classList.contains(cls));
+    return el;
+  }
+
+  // Табы в таблице рейтинга
+  const ozorBtns = document.querySelectorAll(".obzor__open");
+  ozorBtns.forEach((ozorBtn) => {
+    ozorBtn.addEventListener("click", () => {
+      const currParentLine = findAncestor(ozorBtn, "best__table__line");
+      currParentLine.classList.toggle("best__table__line--active");
+    });
   });
 
   // Slider

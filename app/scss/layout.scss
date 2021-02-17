@@ -385,6 +385,7 @@ body {
   padding: 0;
   border: none;
   cursor: pointer;
+  position: relative;
 
   path {
     transition: all 0.2s linear;
@@ -405,6 +406,25 @@ body {
       fill: #fff;
     }
   }
+}
+
+.gift-count {
+  position: absolute;
+  left: 100%;
+  top: -7px;
+  margin-left: -9px;
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  justify-content: center;
+  height: 15px;
+  min-width: 15px;
+  padding: 0 2px;
+  line-height: normal;
+  background: #8226b7;
+  color: #fff;
+  border-radius: 8px;
+  opacity: 1;
 }
 
 .header__intro__lang {
@@ -489,6 +509,12 @@ body {
 
     .header__nav__btn {
       transform: rotate(-180deg);
+    }
+  }
+
+  &:hover {
+    .header__nav__item__menu {
+      display: block;
     }
   }
 }
@@ -716,6 +742,10 @@ body {
 .forecast__icon {
   width: 58px;
   height: 52px;
+  min-width: 58px;
+  min-height: 52px;
+  max-width: 58px;
+  max-height: 52px;
   margin-right: 14px;
 }
 
