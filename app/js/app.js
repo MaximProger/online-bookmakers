@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const headerIntroCenter = document.querySelector(".header__intro__center");
   const socialBtn = document.querySelector(".social__btn");
   const social = document.querySelector(".social");
+  const filterBox = document.querySelector(".whole__left");
 
   // Закрыть все вкладки
   mask.addEventListener("click", () => {
@@ -24,6 +25,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
     if (social) {
       social.classList.remove("social--active");
       socialBtn.classList.remove("social__btn--active");
+    }
+
+    if (filterBox) {
+      filterBox.classList.remove("whole__left--bonus");
     }
 
     mask.classList.remove("mask--active");
@@ -190,7 +195,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // Закрыть фильтр
   const closeFilter = document.querySelector("#closeFilter");
-  const filterBox = document.querySelector(".whole__left");
 
   if (closeFilter) {
     closeFilter.addEventListener("click", () => {
