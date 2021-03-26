@@ -314,4 +314,80 @@ document.addEventListener("DOMContentLoaded", function (event) {
       });
     });
   }
+
+  // INFOPAGE
+
+  //Tabs
+  const tabsHead = document.querySelectorAll(".whole__section__tab__header");
+  if (tabsHead) {
+    tabsHead.forEach((tabHead) => {
+      tabHead.addEventListener("click", (evt) => {
+        evt.preventDefault();
+        const tabHeadParent = findAncestor(tabHead, "whole__section--tab");
+        tabHeadParent.classList.toggle("whole__section--tab--active");
+      });
+    });
+  }
+
+  // Выбор способа оплаты
+  const wholeOptionBtns = document.querySelectorAll(
+    ".whole__section__tab__options__btn"
+  );
+  if (wholeOptionBtns) {
+    wholeOptionBtns.forEach((wholeOptionBtn) => {
+      wholeOptionBtn.addEventListener("click", (evt) => {
+        evt.preventDefault();
+
+        const wholeOptionBtnParent = findAncestor(
+          wholeOptionBtn,
+          "whole__section__tab__option"
+        );
+        const wholeOptionBtnsInner = wholeOptionBtnParent.querySelectorAll(
+          ".whole__section__tab__options__btn"
+        );
+        wholeOptionBtnsInner.forEach((wholeOptionBtnInner) => {
+          wholeOptionBtnInner.classList.remove(
+            "whole__section__tab__options__btn--active"
+          );
+        });
+
+        wholeOptionBtn.classList.add(
+          "whole__section__tab__options__btn--active"
+        );
+      });
+    });
+  }
+
+  // // Копировать в буфер обмена
+  // /* сохраняем текстовое поле в переменную text */
+  // var text = document.getElementById("inputText");
+
+  // /* сохраняем кнопку в переменную btn */
+  // var btn = document.getElementById("copyText");
+
+  // /* вызываем функцию при нажатии на кнопку */
+  // btn.onclick = function () {
+  //   text.select();
+  //   document.execCommand("copy");
+  // };
+
+  const copyBtns = document.querySelectorAll(".whole__section__tab__info__btn");
+  if (copyBtns) {
+    copyBtns.forEach((copyBtn) => {
+      copyBtn.addEventListener("click", (evt) => {
+        evt.preventDefault();
+        const currentCopyItem = findAncestor(
+          copyBtn,
+          "whole__section__tab__info__value--special"
+        );
+        console.log(currentCopyItem);
+        const currentText = currentCopyItem.querySelector(
+          ".whole__section__tab__info__value__text"
+        );
+        console.log(currentText);
+        currentText.select();
+        document.execCommand("copy");
+      });
+    });
+  }
 });

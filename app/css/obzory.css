@@ -1,0 +1,118 @@
+.obzory {
+  background: #242c4f;
+  border-radius: 10px;
+  padding-top: 20px;
+}
+.obzory__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  padding-left: 26px;
+  margin-bottom: 20px;
+}
+.obzory__pannel {
+  border-top: 1px solid rgba(131, 143, 192, 0.2);
+  padding: 12px 26px;
+}
+.obzory__pannel__item {
+  font-size: 13px;
+  line-height: 15px;
+  color: #fff;
+}
+.obzory__body__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.obzory__body__info:last-child {
+  margin-bottom: 0;
+}
+.obzory__body__info__icon {
+  margin-right: 12px;
+}
+.obzory__article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  color: #69a5ff;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+.obzory__article:last-child {
+  margin-bottom: 0;
+}
+.obzory__article:hover {
+  color: #fff;
+}
+.obzory__article:hover .obzory__article__icon {
+  background: url(../images/dest/obzory/arrow__white.svg) no-repeat center;
+}
+.obzory__article__icon {
+  margin-left: 4px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  max-height: 20px;
+  max-width: 20px;
+  background: url(../images/dest/obzory/arrow__blue.svg) no-repeat center;
+}
+.obzory__body__line {
+  padding: 26px;
+  padding-top: 20px;
+}
+.obzory__body__line:nth-child(odd) {
+  background: #1d2442;
+}
+.obzory__body__logo {
+  margin-top: 6px;
+}
+@media (max-width: 1199px) {
+  .obzory {
+    border-radius: 0;
+    border-top: 20px;
+    padding-bottom: 0;
+  }
+  .obzory__title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    margin-bottom: 16px;
+    padding: 0 15px;
+  }
+  .obzory__pannel {
+    display: none;
+  }
+  .obzory__body__line {
+    padding: 16px 13px;
+  }
+  .obzory__body__item {
+    margin-bottom: 16px;
+  }
+  .obzory__body__descr {
+    display: inline-block;
+    color: #838fc0;
+    font-size: 13px;
+    line-height: 15px;
+    margin-bottom: 16px;
+  }
+}

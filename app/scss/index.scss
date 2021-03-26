@@ -755,6 +755,21 @@
   text-align: justify;
 }
 
+.matter__list {
+  &--square {
+    .matter__list__item {
+      margin-bottom: 10px;
+      &::before {
+        border-radius: 50%;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
 .matter__list__item {
   font-size: 14px;
   line-height: 140%;

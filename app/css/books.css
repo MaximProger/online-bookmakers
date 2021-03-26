@@ -1,0 +1,546 @@
+.books__title {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 140%;
+  margin-bottom: 16px;
+}
+.books__description {
+  font-size: 14px;
+  line-height: 160%;
+  color: #838fc0;
+  margin-bottom: 21px;
+}
+.books__pannel {
+  height: 44px;
+  border-radius: 10px 10px 0 0;
+  background: #242c4f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 0 26px;
+}
+.books__pannel--app {
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+.books__pannel__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.books__pannel__item {
+  font-size: 14px;
+  line-height: 16px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  position: relative;
+  margin-right: 26px;
+}
+.books__pannel__item:last-child {
+  margin-right: 0;
+}
+.books__pannel__item::before {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 100px;
+  background: #69a5ff;
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+}
+.books__pannel__item:hover {
+  color: #69a5ff;
+}
+.books__pannel__item:hover path {
+  fill: #69a5ff;
+}
+.books__pannel__item--active {
+  color: #69a5ff;
+}
+.books__pannel__item--active:before {
+  opacity: 1;
+}
+.books__pannel__item--active path {
+  fill: #69a5ff;
+}
+.books__pannel__item--special {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.books__pannel__item--special svg {
+  margin-right: 6px;
+}
+.books__pannel__item path {
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.books__line {
+  padding: 0 26px;
+  background: #1d2442;
+}
+.books__line:nth-child(even) {
+  background: #242c4f;
+}
+.books__line__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(131, 143, 192, 0.2);
+}
+.books__line__top__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.books__line__top__text {
+  display: inline-block;
+  margin-left: 42px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+}
+.books__line__top__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.books__top__btn {
+  margin-left: 16px;
+}
+.books__top__btn:first-child {
+  margin-left: 0;
+}
+.books__line__bot {
+  font-size: 13px;
+  line-height: 160%;
+  letter-spacing: -0.2px;
+  color: #838fc0;
+  padding: 20px 0;
+}
+.books__body {
+  display: none;
+}
+.books__body--active {
+  display: block;
+}
+.books__app__left {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 130px;
+  min-width: 130px;
+}
+.books__app__logo {
+  margin-bottom: 20px;
+}
+.books__app__phone {
+  width: 90px;
+  height: 110px;
+  max-width: 90px;
+  max-height: 110px;
+}
+.books__app__rating {
+  padding-top: 13px;
+  border-top: 1px solid rgba(131, 143, 192, 0.2);
+}
+.books__app__rating__item {
+  display: inline-block;
+  width: 13.33px;
+  height: 13.34px;
+  background: url(../images/dest/books/star.svg);
+}
+.books__app__rating__item--active {
+  background: url(../images/dest/books/star--active.svg);
+}
+.books__app__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+.books__app__rating__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+.books__app__rating__item {
+  margin-right: 3.33px;
+}
+.books__app__rating__item:last-child {
+  margin-right: 0;
+}
+.books__app__rating__value {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 15px;
+  color: #69a5ff;
+  text-decoration: none;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.books__app__rating__value:hover {
+  color: #fff;
+}
+.books__app__right {
+  width: 267px;
+  min-width: 267px;
+  padding: 26px 18px;
+}
+.books__app__btn__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+.books__app__btn__wrapper.no-xl {
+  display: none;
+}
+.books__app__description {
+  font-size: 13px;
+  line-height: 160%;
+  letter-spacing: -0.2px;
+  color: #838fc0;
+}
+.books__app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #242c4f;
+  border-radius: 10px;
+  height: 223px;
+  margin-bottom: 14px;
+}
+.books__app:last-child {
+  margin-bottom: 0;
+}
+.books__app__center {
+  width: 100%;
+  height: 100%;
+}
+.books__app__text__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.books__app__text__wrapper .books__app__rating__wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 6px;
+}
+.books__app__inner__line {
+  margin-bottom: 6px;
+}
+.books__app__inner__line:last-child {
+  margin-bottom: 0;
+}
+.books__app__inner__line--large {
+  margin-bottom: 12px;
+}
+.books__app__text {
+  font-size: 13px;
+  line-height: 160%;
+  letter-spacing: -0.2px;
+}
+.books__app__center {
+  padding: 20px 26px;
+  border-left: 1px solid rgba(131, 143, 192, 0.2);
+  border-right: 1px solid rgba(131, 143, 192, 0.2);
+}
+@media (max-width: 1199px) {
+  .books__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    margin-bottom: 16px;
+    padding-left: 15px;
+  }
+  .books__description {
+    font-size: 14px;
+    line-height: 160%;
+    padding: 0 15px;
+  }
+  .books__pannel {
+    overflow-x: scroll;
+  }
+  .books__pannel--app {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  .books__pannel__wrapper {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .books__pannel__item {
+    white-space: nowrap;
+    margin-right: 20px;
+  }
+  .books__pannel__item:last-child {
+    margin-right: 20px;
+  }
+  .books__line {
+    padding: 0 15px;
+  }
+  .books__line__top__text {
+    display: none;
+  }
+  .books__line__top__logo {
+    max-width: 73px;
+  }
+  .books__line__top {
+    padding: 20px 0;
+  }
+  .books__app {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+  .books__app:nth-child(odd) {
+    background: #1d2442;
+  }
+  .books__app--active .books__app__right {
+    display: block;
+  }
+  .books__app--active .books__app__center {
+    display: block;
+  }
+  .books__app--active .books__app__open img {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+  .books__app--active .books__app__left {
+    border-bottom: 1px solid rgba(131, 143, 192, 0.2);
+  }
+  .books__app__phone {
+    width: 77px;
+    max-width: 77px;
+    height: 124px;
+    max-height: 124px;
+  }
+  .books__app__left {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 15px;
+    padding-top: 26px;
+    padding-bottom: 0;
+  }
+  .books__app__left picture {
+    height: 124px;
+  }
+  .books__app__left__content {
+    width: 100%;
+    padding-left: 18px;
+  }
+  .books__app__logo {
+    margin-bottom: 0;
+  }
+  .books__app__content__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .books__app__open {
+    background: rgba(131, 143, 192, 0.2);
+    border: none;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    min-height: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0;
+    line-height: 1;
+  }
+  .books__app__open:focus {
+    outline: 0;
+  }
+  .books__app__open img {
+    width: 10px;
+    height: 5.7px;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+  }
+  .books__app__rating {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    border-top: none;
+    padding-top: 0;
+    margin: 16px 0;
+  }
+  .books__app__rating .books__app__rating__wrapper {
+    width: auto;
+    margin-right: 12px;
+  }
+  .books__app__btn__wrapper {
+    margin-bottom: 0;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .books__app__btn__wrapper.no-md {
+    display: none;
+  }
+  .books__app__btn__wrapper.md {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .books__app__btn:first-child {
+    margin-right: 12px;
+  }
+  .books__app__inner__line--large {
+    margin-bottom: 16px;
+  }
+  .books__app__inner__line--large:last-child {
+    margin-bottom: 16px;
+  }
+  .books__app__right {
+    padding: 0 15px;
+    padding-bottom: 26px;
+    width: 100%;
+    display: none;
+  }
+  .books__app__center {
+    padding: 0 15px;
+    padding-top: 20px;
+    display: none;
+  }
+  .books__app__text.col-3 {
+    max-width: 29%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 29%;
+    flex: 0 0 29%;
+  }
+  .books__app__text.col-9 {
+    max-width: 71%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 71%;
+    flex: 0 0 71%;
+  }
+}
