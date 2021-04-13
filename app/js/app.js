@@ -45,6 +45,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   });
 
+  const mobileMenuBtn = document.querySelector("#mobileMenuBtn");
+  mobileMenuBtn.addEventListener("click", (evt) => {
+    evt.preventDefault();
+    navInner.classList.toggle("header__intro__nav--active");
+
+    if (window.innerWidth < 1200) {
+      mask.classList.add("mask--active");
+      body.classList.add("fixed");
+    }
+  });
+
   const navClose = document.querySelector("#navClose");
   navClose.addEventListener("click", () => {
     navInner.classList.remove("header__intro__nav--active");
