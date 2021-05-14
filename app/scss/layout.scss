@@ -880,6 +880,12 @@ strong {
       }
     }
   }
+
+  &.menu {
+    .sidebar__head {
+      margin-bottom: 1px;
+    }
+  }
 }
 
 .sidebar__head {
@@ -1234,6 +1240,87 @@ strong {
   }
 }
 
+.menu__item {
+  background: $blue_dark;
+  &--active {
+    .menu__item__list {
+      display: flex;
+    }
+
+    .menu__item__arrow {
+      transform: rotate(0deg);
+    }
+  }
+
+  &:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.menu__item__arrow {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  height: 6.68px;
+  width: 12px;
+  cursor: pointer;
+  background: url(../images/dest/header/arrow.svg) no-repeat center;
+  transition: all 0.2s linear;
+  transform: rotate(-90deg);
+
+  &.no-xl {
+    display: none;
+  }
+}
+
+.menu__item__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 15px;
+  border-bottom: 1px solid #1b213b;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  user-select: none;
+
+  &:hover {
+    background: $blue_light;
+  }
+}
+
+.menu__item__text {
+  font-size: 14px;
+}
+
+.menu__item__list {
+  padding: 15px 0;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  border-bottom: 1px solid #1b213b;
+}
+
+.menu__item__link {
+  display: inline-block;
+  margin: 0 15px;
+  margin-bottom: 17px;
+  color: #fff;
+  transition: all 0.2s linear;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  font-size: 13px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    color: $blue_hover;
+    border-color: $blue_hover;
+  }
+}
+
 @media (max-width: $tablet) {
   .header__rates {
     margin-top: 14px;
@@ -1392,7 +1479,7 @@ strong {
   }
 
   .whole__left {
-    display: none;
+    // display: none;
 
     &--bonus {
       display: block;
@@ -1650,6 +1737,50 @@ strong {
     display: block;
     margin: 0 auto;
     margin-bottom: 20px;
+  }
+
+  .sidebar {
+    display: none;
+    &.menu {
+      display: block;
+      .sidebar__head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 15px;
+        border-radius: 10px;
+        transition: all 0.2s linear;
+      }
+
+      .sidebar__title {
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      .sidebar__body {
+        display: none;
+      }
+
+      &--active {
+        .sidebar__body {
+          display: block;
+        }
+
+        .sidebar__head {
+          border-radius: 10px 10px 0 0;
+
+          .menu__item__arrow {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+
+  .menu__item__arrow {
+    &.md {
+      display: inline-block;
+    }
   }
 }
 

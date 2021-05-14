@@ -370,18 +370,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   // // Копировать в буфер обмена
-  // /* сохраняем текстовое поле в переменную text */
-  // var text = document.getElementById("inputText");
-
-  // /* сохраняем кнопку в переменную btn */
-  // var btn = document.getElementById("copyText");
-
-  // /* вызываем функцию при нажатии на кнопку */
-  // btn.onclick = function () {
-  //   text.select();
-  //   document.execCommand("copy");
-  // };
-
   const copyBtns = document.querySelectorAll(".whole__section__tab__info__btn");
   if (copyBtns) {
     copyBtns.forEach((copyBtn) => {
@@ -399,6 +387,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
         currentText.select();
         document.execCommand("copy");
       });
+    });
+  }
+
+  // Меню сайдбар
+  const menuItems = document.querySelectorAll(".menu__item");
+  if (menuItems) {
+    menuItems.forEach((menuItem) => {
+      menuItem.addEventListener("click", (evt) => {
+        menuItem.classList.toggle("menu__item--active");
+      });
+    });
+  }
+
+  const menu = document.querySelector(".menu");
+  if (menu) {
+    const menuHead = menu.querySelector(".sidebar__head");
+    menuHead.addEventListener("click", () => {
+      menu.classList.toggle("menu--active");
     });
   }
 });
