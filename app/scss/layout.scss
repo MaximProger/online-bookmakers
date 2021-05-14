@@ -1479,7 +1479,7 @@ strong {
   }
 
   .whole__left {
-    // display: none;
+    display: none;
 
     &--bonus {
       display: block;
@@ -1740,9 +1740,11 @@ strong {
   }
 
   .sidebar {
-    display: none;
     &.menu {
       display: block;
+      width: calc(100% - 30px);
+      margin: 0 auto;
+      margin-bottom: 28px;
       .sidebar__head {
         display: flex;
         align-items: center;

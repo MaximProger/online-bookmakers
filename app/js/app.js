@@ -400,7 +400,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
-  const menu = document.querySelector(".menu");
+  const menu = document.querySelector("#menu");
   if (menu) {
     const menuHead = menu.querySelector(".sidebar__head");
     menuHead.addEventListener("click", () => {
