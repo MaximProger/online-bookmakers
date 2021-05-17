@@ -7,3 +7,60 @@
 // @import "books";
 // @import "infopage";
 @import "layout";
+
+.up {
+  position: fixed;
+  background-color: #2f3962;
+  bottom: 25px;
+  right: 5vw;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s linear;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #242c4f;
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(27, 33, 59, 0.6);
+}
+
+.up--show {
+  opacity: 1;
+  pointer-events: inherit;
+}
+
+.up:hover {
+  opacity: 0.7;
+}
+
+.header__burger--absolute {
+  display: none;
+  position: absolute;
+  left: 5vw;
+  top: 20px;
+}
+
+.header__nav--scroll {
+  display: block;
+}
+
+.header__intro__nav--fixed {
+  position: fixed;
+  display: block;
+  left: 5vw;
+  top: 60px;
+}
+
+@media (max-width: 1199px) {
+  .up {
+    bottom: 60px;
+    height: 40px;
+    width: 40px;
+  }
+}

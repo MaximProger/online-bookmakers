@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const socialBtn = document.querySelector(".social__btn");
   const social = document.querySelector(".social");
   const filterBox = document.querySelector(".whole__left");
+  const headerBtnAbsolute = document.querySelector(".header__burger--absolute");
 
   // Закрыть все вкладки
   mask.addEventListener("click", () => {
@@ -103,7 +104,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
       });
     } else {
       headerNav.classList.remove("header__nav--scroll");
-      // mask.classList.remove("mask--active");
+      navInner.classList.remove("header__intro__nav--fixed");
+      headerBtnAbsolute.classList.remove("header__burger--active");
 
       navItems.forEach((navItem) => {
         navItem.removeEventListener("mouseover", maskOpen);
@@ -405,6 +407,47 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const menuHead = menu.querySelector(".sidebar__head");
     menuHead.addEventListener("click", () => {
       menu.classList.toggle("menu--active");
+    });
+  }
+
+  // Навверх
+  function trackScroll() {
+    var scrolled = window.pageYOffset;
+    var coords = document.documentElement.clientHeight;
+
+    if (scrolled > coords) {
+      goTopBtn.classList.add("up--show");
+    }
+    if (scrolled < coords) {
+      goTopBtn.classList.remove("up--show");
+    }
+  }
+
+  function backToTop() {
+    if (window.pageYOffset > 0) {
+      window.scrollBy(0, -80);
+      setTimeout(backToTop, 0);
+    }
+  }
+
+  var goTopBtn = document.querySelector("#upBtn");
+
+  window.addEventListener("scroll", trackScroll);
+  goTopBtn.addEventListener("click", backToTop);
+
+  // Tooltip
+  tippy("[data-tippy-content]");
+
+  if (headerBtnAbsolute) {
+    headerBtnAbsolute.addEventListener("click", (evt) => {
+      evt.preventDefault();
+      headerBtnAbsolute.classList.toggle("header__burger--active");
+      navInner.classList.toggle("header__intro__nav--fixed");
+
+      if (window.innerWidth < 1200) {
+        mask.classList.add("mask--active");
+        body.classList.add("fixed");
+      }
     });
   }
 });

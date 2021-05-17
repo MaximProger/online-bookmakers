@@ -124,10 +124,10 @@
 				<div class="header__intro__wrapper">
 
 					<div class="header__intro__left">
-						<button class="header__burger">
+						<button class="header__burger" id="headerBurgerBtn">
 							<span class="header__burger__symbol"></span>
 						</button>
-						<a href="/" class="logo">
+						<a href="/" class="logo" data-tippy-content="Logo">
 							<img loading="lazy" src="./images/dest/header/logo.svg" alt="OnlineBK">
 						</a>
 					</div>
@@ -510,6 +510,9 @@
 
 		<nav class="header__nav" id="headerNav">
 			<div class="container">
+				<button class="header__burger header__burger--absolute">
+					<span class="header__burger__symbol"></span>
+				</button>
 				<div class="header__nav__wrapper">
 
 					<div class="header__nav__item">
@@ -3626,8 +3629,13 @@
 	</nav>
 	<!-- Mobile nav END -->
 
-	<!-- Glider -->
+	<button type="button" class="up" id="upBtn">
+		↑
+	</button>
+
 	<script src="./js/include/glider.min.js"></script>
+	<script src="./js/include/popper.js"></script>
+	<script src="./js/include/tippy.js"></script>
 
 	<!-- Custom JS -->
 	<script src="./js/app.min.js"></script>
