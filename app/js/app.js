@@ -450,4 +450,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
       }
     });
   }
+
+  const bestItemImgs = document.querySelectorAll(".best__table__item__img");
+  bestItemImgs.forEach((bestItemImg) => {
+    bestItemImg.setAttribute("height", bestItemImg.height);
+    console.log(bestItemImg.height);
+  });
 });
