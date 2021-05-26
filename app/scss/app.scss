@@ -770,10 +770,11 @@
 
   .app__parners__fade {
     position: absolute;
-    top: 25px;
+    top: 50%;
     right: 0;
     width: 26.57px;
-    height: 155.32px;
+    height: 100%;
+    transform: translate(0, -50%);
     background: linear-gradient(270deg, #242c4f 0%, rgba(36, 44, 79, 0) 100%);
   }
 
@@ -887,10 +888,11 @@
 
   .app__intro__phones__fade {
     position: absolute;
-    height: 245px;
+    height: 100%;
     width: 11px;
     right: 0;
-    top: 0;
+    top: 50%;
+    transform: translate(0, -50%);
     background: linear-gradient(270deg, #203d5e 0%, rgba(32, 60, 94, 0) 100%);
   }
 }
