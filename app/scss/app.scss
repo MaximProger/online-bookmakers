@@ -583,7 +583,7 @@
     padding: 15px 13.5px 23px;
     padding-right: 0;
     padding-left: 0;
-    padding-bottom: 0;
+    // padding-bottom: 0;
     position: relative;
   }
 
@@ -797,7 +797,7 @@
   .app__partners__list__wrapper {
     overflow-x: scroll;
     padding: 24px 19px;
-    padding-bottom: 4px;
+    padding-bottom: 24px;
   }
 
   .app__partners__list {
@@ -860,7 +860,7 @@
   .app__intro__info {
     margin-top: 0;
     padding: 15px 13.5px;
-    padding-bottom: 0;
+    // padding-bottom: 0;
     overflow-x: scroll;
 
     .infopage__banner__number {
