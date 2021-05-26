@@ -71,10 +71,13 @@
 }
 
 .app__tags {
+  margin-bottom: 28px;
+}
+
+.app__tags__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 28px;
 }
 
 .app__tags__item {
@@ -246,11 +249,14 @@
 }
 
 .app__intro__info {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 18px 21.5px;
+}
+
+.app__intro__info__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 18px 21.5px;
 }
 
 .app__intro__info__line {
@@ -344,7 +350,7 @@
 
 .app__benefits__item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   font-size: 15px;
   line-height: 140%;
@@ -356,6 +362,7 @@
   }
 
   &::before {
+    margin-top: 4px;
     content: "";
     display: inline-block;
     background: $blue;
@@ -530,7 +537,360 @@
   max-height: 172.74px;
 }
 
+.app__intro__phones__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
 @media (max-width: $tablet) {
+  .app__section {
+    margin: 0 13.5px;
+    margin-bottom: 20px;
+
+    &--special {
+      .app__section__wrapper {
+        padding: 0;
+      }
+    }
+
+    .matter__text {
+      margin-bottom: 18px;
+    }
+  }
+
+  .app__intro__header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 11px 12px;
+  }
+
+  .app__intro__logo {
+    width: 106px;
+    margin-left: -12px;
+  }
+
+  .app__intro__title {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 11px;
+    text-align: left;
+  }
+
+  .app__intro__body {
+    padding: 15px 13.5px 23px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    position: relative;
+  }
+
+  .app__tags__block {
+    position: relative;
+  }
+
+  .app__tags {
+    overflow-x: scroll;
+    position: relative;
+    margin-bottom: 0;
+    padding-left: 13.5px;
+  }
+
+  .app__tags__blure {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    height: 38px;
+    width: 27px;
+    background: linear-gradient(270deg, #203d5e 0%, rgba(32, 60, 94, 0) 100%);
+  }
+
+  .app__tags__item {
+    white-space: nowrap;
+    margin-right: 11px;
+  }
+
+  .app__stats {
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+
+  .app__stats__line {
+    display: none;
+  }
+
+  .app__stats__right {
+    width: 100%;
+    flex-direction: row;
+    margin-bottom: 14px;
+  }
+
+  .app__stats__circle {
+    margin-bottom: 0;
+    margin-right: 15px;
+  }
+
+  .app__progress {
+    width: 100%;
+
+    &:nth-child(3) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .app__stats__left {
+    padding: 0 13.5px;
+  }
+
+  .app__intro__description {
+    flex-direction: column;
+  }
+
+  .app__intro__list {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 13.5px;
+    padding: 15px 8px;
+    margin-bottom: 20px;
+  }
+
+  .app__section__wrapper {
+    padding: 16px 13.5px;
+  }
+
+  .app__benefits__wrapper {
+    flex-direction: column;
+  }
+
+  .app__benefits__col {
+    max-width: 100%;
+    margin-bottom: 18px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .app__benefits__list {
+    padding: 13px;
+  }
+
+  .app__benefits__item {
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 10px;
+  }
+
+  .app__benefits__header {
+    margin-bottom: 6px;
+  }
+
+  .app__section__wrapper {
+  }
+
+  .app__hints__link {
+    border: none;
+    text-decoration: underline;
+  }
+
+  .app__hints {
+    padding: 17px 13px;
+  }
+
+  .app__hints__title {
+    margin-bottom: 10px;
+  }
+
+  .app__hints__item {
+    margin-bottom: 14px;
+  }
+
+  .app__section__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    margin-bottom: 12px;
+  }
+
+  .app__section__flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app__section__col {
+    order: 2;
+    margin-right: 0;
+    max-width: 100%;
+  }
+
+  .app__section__img {
+    margin-bottom: 25px;
+  }
+
+  .app__section__list__item {
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 8px;
+  }
+
+  .app__section__text {
+    font-size: 14px;
+    line-height: 140%;
+    margin-top: 25px;
+  }
+
+  .app__section__alert {
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 140%;
+    padding: 12px 4px 12px 15px;
+
+    strong {
+      font-size: 15px;
+    }
+  }
+
+  .app__section__suptitle {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  .app__description {
+    font-size: 15px;
+    line-height: 140%;
+  }
+
+  .app__partners {
+    position: relative;
+  }
+
+  .app__parners__fade {
+    position: absolute;
+    bottom: 35px;
+    right: 0;
+    width: 26.57px;
+    height: 155.32px;
+    background: linear-gradient(270deg, #242c4f 0%, rgba(36, 44, 79, 0) 100%);
+  }
+
+  .app__partners__head {
+    padding: 21px 20px 10px;
+  }
+
+  .app__partners__title {
+    font-size: 20px;
+    line-height: 140%;
+  }
+
+  .app__partners__body {
+    padding: 0;
+  }
+
+  .app__partners__inner {
+    position: relative;
+  }
+
+  .app__partners__list__wrapper {
+    overflow-x: scroll;
+    padding: 24px 19px;
+    padding-bottom: 4px;
+  }
+
+  .app__partners__list {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .app__partners__item {
+    margin-right: 12px;
+  }
+
+  .app__partners__img__wrapper {
+    width: 210.46px;
+    height: 140.31px;
+    margin-bottom: 10px;
+  }
+
+  .app__partners__img {
+    max-width: 210.46px;
+    width: 210.46px;
+    height: 140.31px;
+  }
+
+  .app__partners__item__title {
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .app__intro__info {
+    margin-top: 25px;
+  }
 }
 @media (max-width: $mobile) {
+  .app__intro__phones__block {
+    position: relative;
+    width: 100%;
+  }
+
+  .app__intro__phones {
+    padding-left: 13.5px;
+    overflow-x: scroll;
+
+    position: relative;
+  }
+
+  .app__intro__phones__wrapper {
+    gap: 20px;
+    width: 500px;
+    justify-content: flex-start;
+
+    picture {
+      display: block;
+    }
+  }
+
+  .app__intro__phones__item {
+    display: block;
+  }
+
+  .app__intro__info {
+    margin-top: 0;
+    padding: 15px 13.5px;
+    padding-bottom: 0;
+    overflow-x: scroll;
+
+    .infopage__banner__number {
+      margin-bottom: 0;
+      // margin-right: 20px;
+
+      span {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .app__intro__info__wrapper {
+    width: 600px;
+  }
+
+  .app__intro__info__line {
+    display: none;
+  }
+
+  .app__intro__phones__block {
+    position: relative;
+  }
+
+  .app__intro__phones__fade {
+    position: absolute;
+    height: 245px;
+    width: 11px;
+    right: 0;
+    bottom: 14px;
+    background: linear-gradient(270deg, #203d5e 0%, rgba(32, 60, 94, 0) 100%);
+  }
 }
