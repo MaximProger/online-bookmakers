@@ -424,11 +424,49 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   // Сортировка bonus 2
-  const bonusSortItems = document.querySelectorAll(".bonus__sort__item");
-  if (bonusSortItems) {
-    bonusSortItems.forEach((bonusSortItem) => {
-      bonusSortItem.addEventListener("click", () => {
-        bonusSortItem.classList.toggle("bonus__sort__item--active");
+  function closeBonusDropdowns() {
+    const bonusSortItemDropdowns = document.querySelectorAll(
+      ".bonus__sort__item--dropdown"
+    );
+    bonusSortItemDropdowns.forEach((bonusSortItemDropdown) => {
+      bonusSortItemDropdown.classList.remove("bonus__sort__item--active");
+    });
+  }
+
+  const bonusSortItemWrappers = document.querySelectorAll(
+    ".bonus__sort__item__wrapper"
+  );
+  if (bonusSortItemWrappers) {
+    bonusSortItemWrappers.forEach((bonusSortItemWrapper) => {
+      bonusSortItemWrapper.addEventListener("click", () => {
+        const bonusSortItem = findAncestor(
+          bonusSortItemWrapper,
+          "bonus__sort__item--dropdown"
+        );
+        if (bonusSortItem.classList.contains("bonus__sort__item--active")) {
+          bonusSortItem.classList.remove("bonus__sort__item--active");
+        } else {
+          closeBonusDropdowns();
+          bonusSortItem.classList.add("bonus__sort__item--active");
+        }
+      });
+    });
+  }
+
+  const bonusSortMenuItems = document.querySelectorAll(
+    ".bonus__sort__menu__item"
+  );
+  if (bonusSortMenuItems) {
+    bonusSortMenuItems.forEach((bonusSortMenuItem) => {
+      bonusSortMenuItem.addEventListener("click", () => {
+        const bonusSortItem = findAncestor(
+          bonusSortMenuItem,
+          "bonus__sort__item--dropdown"
+        );
+        bonusSortItem.classList.remove("bonus__sort__item--active");
+
+        const bonusSortText = bonusSortItem.querySelector(".bonus__sort__text");
+        bonusSortText.innerHTML = bonusSortMenuItem.innerHTML;
       });
     });
   }
