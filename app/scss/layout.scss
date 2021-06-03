@@ -71,6 +71,7 @@ strong {
 }
 
 .btn {
+  display: inline-block;
   background: $purple;
   border-radius: 100px;
   font-weight: 500;
@@ -81,6 +82,7 @@ strong {
   padding: 10px 20px;
   cursor: pointer;
   transition: all 0.2s linear;
+  text-decoration: none;
 
   &:focus {
     outline: none;
@@ -101,7 +103,7 @@ strong {
   &--flex {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     width: 205px;
     font-weight: 500;
     font-size: 14px;
@@ -117,6 +119,10 @@ strong {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  &--center {
+    justify-content: center;
+  }
 
   .btn {
     &:first-child {
@@ -1055,6 +1061,10 @@ strong {
   padding-top: 40px;
   padding-bottom: 35px;
   background: $blue_dark;
+
+  &--nomt {
+    margin-top: 0;
+  }
 }
 
 .footer__title {
@@ -1461,6 +1471,10 @@ strong {
 
   .header__nav {
     display: none;
+
+    &--scroll {
+      display: none !important;
+    }
   }
 
   .header__intro {
@@ -1821,6 +1835,10 @@ strong {
     margin-top: 39px;
     padding-bottom: 31px;
     padding-top: 0;
+
+    &--nomt {
+      margin-top: 0;
+    }
   }
 
   .footer__col {
@@ -1928,6 +1946,16 @@ strong {
 
   .btns__wrapper {
     justify-content: space-between;
+
+    &--center {
+      flex-direction: column;
+      gap: 20px;
+
+      .btn {
+        max-width: 205px !important;
+      }
+    }
+
     .btn {
       max-width: 48%;
       &:first-child {

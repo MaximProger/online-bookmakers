@@ -91,29 +91,29 @@ document.addEventListener("DOMContentLoaded", function (event) {
     mask.classList.remove("mask--active");
   }
 
-  // document.addEventListener("scroll", () => {
-  //   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  document.addEventListener("scroll", () => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  //   if (scrollTop > windowH) {
-  //     headerNav.classList.add("header__nav--scroll");
+    if (scrollTop > windowH) {
+      headerNav.classList.add("header__nav--scroll");
 
-  //     navItems.forEach((navItem) => {
-  //       navItem.addEventListener("mouseover", maskOpen);
+      navItems.forEach((navItem) => {
+        navItem.addEventListener("mouseover", maskOpen);
 
-  //       navItem.addEventListener("mouseout", maskHide);
-  //     });
-  //   } else {
-  //     headerNav.classList.remove("header__nav--scroll");
-  //     navInner.classList.remove("header__intro__nav--fixed");
-  //     headerBtnAbsolute.classList.remove("header__burger--active");
+        navItem.addEventListener("mouseout", maskHide);
+      });
+    } else {
+      headerNav.classList.remove("header__nav--scroll");
+      navInner.classList.remove("header__intro__nav--fixed");
+      headerBtnAbsolute.classList.remove("header__burger--active");
 
-  //     navItems.forEach((navItem) => {
-  //       navItem.removeEventListener("mouseover", maskOpen);
+      navItems.forEach((navItem) => {
+        navItem.removeEventListener("mouseover", maskOpen);
 
-  //       navItem.removeEventListener("mouseout", maskHide);
-  //     });
-  //   }
-  // });
+        navItem.removeEventListener("mouseout", maskHide);
+      });
+    }
+  });
 
   // Вкладки в футере
   const footerTitles = document.querySelectorAll(".footer__title");
@@ -410,35 +410,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
-  // Навверх
-  // function trackScroll() {
-  //   var scrolled = window.pageYOffset;
-  //   var coords = document.documentElement.clientHeight;
-
-  //   if (scrolled > coords) {
-  //     goTopBtn.classList.add("up--show");
-  //   }
-  //   if (scrolled < coords) {
-  //     goTopBtn.classList.remove("up--show");
-  //   }
-  // }
-
-  // function backToTop() {
-  //   if (window.pageYOffset > 0) {
-  //     window.scrollBy(0, -80);
-  //     setTimeout(backToTop, 0);
-  //   }
-  // }
-
-  // const goTopBtn = document.querySelector("#upBtn");
-  // if (goTopBtn) {
-  //   window.addEventListener("scroll", trackScroll);
-  //   goTopBtn.addEventListener("click", backToTop);
-  // }
-
-  // Tooltip
-  // tippy("[data-tippy-content]");
-
   if (headerBtnAbsolute) {
     headerBtnAbsolute.addEventListener("click", (evt) => {
       evt.preventDefault();
@@ -452,11 +423,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
-  const bestItemImgs = document.querySelectorAll(".best__table__item__img");
-  if (bestItemImgs) {
-    bestItemImgs.forEach((bestItemImg) => {
-      bestItemImg.setAttribute("height", bestItemImg.height);
-      console.log(bestItemImg.height);
+  // Сортировка bonus 2
+  const bonusSortItems = document.querySelectorAll(".bonus__sort__item");
+  if (bonusSortItems) {
+    bonusSortItems.forEach((bonusSortItem) => {
+      bonusSortItem.addEventListener("click", () => {
+        bonusSortItem.classList.toggle("bonus__sort__item--active");
+      });
     });
   }
 });

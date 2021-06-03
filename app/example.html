@@ -1,0 +1,380 @@
+<style>
+  /* // Oops */
+  .oops__title {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+  }
+
+  .oops__description {
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  .oops__list {
+    margin-bottom: 20px;
+  }
+
+  .oops__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #2f3962;
+    margin-bottom: 6px;
+  }
+
+  .oops__logo {
+    text-decoration: none;
+  }
+
+  .oops__price {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .oops__price__gift {
+    max-width: 16px;
+    margin-right: 7px;
+  }
+
+  .oops__price__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .oops__price__suptext {
+    color: #69a5ff;
+    text-transform: uppercase;
+    font-size: 8px;
+    letter-spacing: 1.1px;
+    line-height: 1.2;
+  }
+
+  .oops__price__value {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  .oops__info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .oops__info__icon {
+    max-width: 16px;
+    margin-right: 8px;
+  }
+
+  @media (max-width: 767px) {
+    .oops__list {
+      max-height: 280px;
+      overflow-y: scroll;
+    }
+  }
+
+  /* // Oops END */
+
+  /* // Cookie */
+  @media (max-width: 767px) {
+    .bottom-cookie-accept-wrapper {
+      width: 47%;
+      left: 5px;
+      bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .bottom-cookie-accept {
+      padding: 0 15px;
+      text-align: center;
+    }
+
+    .bottom-cookie-accept-text p {
+      font-size: 12px;
+    }
+  }
+
+  /* // Cookie END */
+
+  /* // Table */
+  table {
+    width: 100%;
+  }
+
+  td {
+    padding-bottom: 10px;
+  }
+
+  td.boxer_1.bmma {
+    width: 150px;
+  }
+
+  td.boxer_2.bmma {
+    width: 300px;
+  }
+
+  .month_name {
+    padding: 15px 0;
+    background: #2f3962;
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  .info {
+    padding: 20px 0;
+    font-weight: bold;
+    background: #69a5ff;
+  }
+
+  /* // Table END */
+</style>
+
+<!-- Modals -->
+<div id="oops-modal" class="modal" style="">
+  <div class="modal__dialog">
+    <div tabindex="-1" class="modal__content"><button type="button" class="modal__close"><img loading="lazy"
+          src="https://online-bookmakers.ru/app/images/dest/header/close.svg" alt="close"></button>
+      <div class="oops">
+        <div class="oops__wrapper">
+          <h2 class="oops__title">
+            Упс :(
+          </h2>
+          <p class="oops__description">
+            Букмекер не хочет оплачивать переходы через наш сайт. Зато здесь вам будут рады:
+          </p>
+          <div class="oops__list">
+            <div class="oops__item">
+              <a href="#" class="oops__logo">
+                <picture decoding="async">
+                  <source type="image/webp" srcset="./images/dest/addittion/opps__logo.webp">
+                  <img width="92" height="30" src="./images/dest/addittion/opps__logo.png" alt="logo"
+                    class="oops__logo">
+                </picture>
+
+              </a>
+
+              <a href="" class="oops__price">
+
+                <img src="./images/dest/addittion/gift--ex.svg" alt="gift" class="oops__price__gift">
+
+                <div class="oops__price__wrapper">
+                  <span class="oops__price__suptext">
+                    Exclusive
+                  </span>
+                  <span class="oops__price__value">
+                    8 000 ₽
+                  </span>
+                </div>
+
+              </a>
+
+              <a href="#" class="btn oops__btn">
+                Играть
+              </a>
+
+
+            </div>
+            <div class="oops__item">
+              <a href="#" class="oops__logo">
+                <picture decoding="async">
+                  <source type="image/webp" srcset="./images/dest/addittion/opps__logo.webp">
+                  <img width="92" height="30" src="./images/dest/addittion/opps__logo.png" alt="logo"
+                    class="oops__logo">
+                </picture>
+
+              </a>
+
+              <a href="" class="oops__price">
+
+                <img src="./images/dest/addittion/gift.svg" alt="gift" class="oops__price__gift">
+
+                <div class="oops__price__wrapper">
+                  <span class="oops__price__value">
+                    8 000 ₽
+                  </span>
+                </div>
+
+              </a>
+
+              <a href="#" class="btn oops__btn">
+                Играть
+              </a>
+
+
+            </div>
+            <div class="oops__item">
+              <a href="#" class="oops__logo">
+                <picture decoding="async">
+                  <source type="image/webp" srcset="./images/dest/addittion/opps__logo.webp">
+                  <img width="92" height="30" src="./images/dest/addittion/opps__logo.png" alt="logo"
+                    class="oops__logo">
+                </picture>
+
+              </a>
+
+              <a href="" class="oops__price">
+
+                <img src="./images/dest/addittion/gift--ex.svg" alt="gift" class="oops__price__gift">
+
+                <div class="oops__price__wrapper">
+                  <span class="oops__price__suptext">
+                    Exclusive
+                  </span>
+                  <span class="oops__price__value">
+                    8 000 ₽
+                  </span>
+                </div>
+
+              </a>
+
+              <a href="#" class="btn oops__btn">
+                Играть
+              </a>
+
+
+            </div>
+            <div class="oops__item">
+              <a href="#" class="oops__logo">
+                <picture decoding="async">
+                  <source type="image/webp" srcset="./images/dest/addittion/opps__logo.webp">
+                  <img width="92" height="30" src="./images/dest/addittion/opps__logo.png" alt="logo"
+                    class="oops__logo">
+                </picture>
+
+              </a>
+
+              <a href="" class="oops__price">
+
+                <img src="./images/dest/addittion/gift--ex.svg" alt="gift" class="oops__price__gift">
+
+                <div class="oops__price__wrapper">
+                  <span class="oops__price__suptext">
+                    Exclusive
+                  </span>
+                  <span class="oops__price__value">
+                    8 000 ₽
+                  </span>
+                </div>
+
+              </a>
+
+              <a href="#" class="btn oops__btn">
+                Играть
+              </a>
+
+
+            </div>
+            <div class="oops__item">
+              <a href="#" class="oops__logo">
+                <picture decoding="async">
+                  <source type="image/webp" srcset="./images/dest/addittion/opps__logo.webp">
+                  <img width="92" height="30" src="./images/dest/addittion/opps__logo.png" alt="logo"
+                    class="oops__logo">
+                </picture>
+
+              </a>
+
+              <a href="" class="oops__price">
+
+                <img src="./images/dest/addittion/gift.svg" alt="gift" class="oops__price__gift">
+
+                <div class="oops__price__wrapper">
+                  <span class="oops__price__value">
+                    8 000 ₽
+                  </span>
+                </div>
+
+              </a>
+
+              <a href="#" class="btn oops__btn">
+                Играть
+              </a>
+
+
+            </div>
+            <div class="oops__item">
+              <a href="#" class="oops__logo">
+                <picture decoding="async">
+                  <source type="image/webp" srcset="./images/dest/addittion/opps__logo.webp">
+                  <img width="92" height="30" src="./images/dest/addittion/opps__logo.png" alt="logo"
+                    class="oops__logo">
+                </picture>
+
+              </a>
+
+              <a href="" class="oops__price">
+
+                <img src="./images/dest/addittion/gift--ex.svg" alt="gift" class="oops__price__gift">
+
+                <div class="oops__price__wrapper">
+                  <span class="oops__price__suptext">
+                    Exclusive
+                  </span>
+                  <span class="oops__price__value">
+                    8 000 ₽
+                  </span>
+                </div>
+
+              </a>
+
+              <a href="#" class="btn oops__btn">
+                Играть
+              </a>
+
+
+            </div>
+            <div class="oops__item">
+              <a href="#" class="oops__logo">
+                <picture decoding="async">
+                  <source type="image/webp" srcset="./images/dest/addittion/opps__logo.webp">
+                  <img width="92" height="30" src="./images/dest/addittion/opps__logo.png" alt="logo"
+                    class="oops__logo">
+                </picture>
+
+              </a>
+
+              <a href="" class="oops__price">
+
+                <img src="./images/dest/addittion/gift--ex.svg" alt="gift" class="oops__price__gift">
+
+                <div class="oops__price__wrapper">
+                  <span class="oops__price__suptext">
+                    Exclusive
+                  </span>
+                  <span class="oops__price__value">
+                    8 000 ₽
+                  </span>
+                </div>
+
+              </a>
+
+              <a href="#" class="btn oops__btn">
+                Играть
+              </a>
+
+
+            </div>
+          </div>
+          <div class="oops__bot">
+            <p class="oops__info">
+              <img src="./images/dest/addittion/rupor.svg" alt="icon" class="oops__info__icon">
+              <span class="oops__info__text">
+                Места оплачены
+              </span>
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modals END -->

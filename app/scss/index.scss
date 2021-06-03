@@ -502,6 +502,14 @@
   &:hover {
     background: $blue_hover;
   }
+
+  &--purple {
+    background: $purple;
+
+    &:hover {
+      background: $purple_hover;
+    }
+  }
 }
 
 // Prognosis
