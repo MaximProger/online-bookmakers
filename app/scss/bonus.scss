@@ -679,6 +679,11 @@
   .bonus__banner {
     margin: 0 auto;
     width: 348px;
+
+    .infopage__banner__number {
+      margin-bottom: 22px;
+    }
+
     .best__all {
       border-radius: 0 0 10px 10px;
     }
@@ -687,8 +692,12 @@
   .bonus__banner__top {
     flex-direction: column;
 
-    margin-bottom: 23px;
+    margin-bottom: 22px;
     padding: 0 15px;
+  }
+
+  .bonus__banner__logo {
+    margin-bottom: 23px;
   }
 
   .bonus__banner__btn {
