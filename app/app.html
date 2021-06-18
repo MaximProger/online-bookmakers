@@ -1329,7 +1329,11 @@
                     <div class="app__intro__phones__block">
                       <div class="app__intro__phones">
 
-                        <div class="app__intro__phones__wrapper">
+                        <button class="app__phones__btn experts__btn experts__btn--prev" id="appPhonesPrev">
+                          <img loading="lazy" src="./images/dest/index/experts__arrow.svg" alt="prev">
+                        </button>
+
+                        <div class="app__intro__phones__wrapper" id="appPhonesSlider">
                           <picture decoding="async">
                             <source type="image/webp" srcset="./images/dest/app/phone__1.webp">
                             <img width="113" height="242" loading="lazy" alt="phone" class="app__intro__phones__item"
@@ -1343,11 +1347,21 @@
                           </picture>
 
                           <picture decoding="async">
+                            <source type="image/webp" srcset="./images/dest/app/phone__1.webp">
+                            <img width="113" height="242" loading="lazy" alt="phone" class="app__intro__phones__item"
+                              src="./images/dest/app/phone__1.png">
+                          </picture>
+
+                          <picture decoding="async">
                             <source type="image/webp" srcset="./images/dest/app/phone__3.webp">
                             <img width="113" height="242" loading="lazy" alt="phone" class="app__intro__phones__item"
                               src="./images/dest/app/phone__3.png">
                           </picture>
                         </div>
+
+                        <button class="app__phones__btn experts__btn experts__btn--next" id="appPhonesNext">
+                          <img loading="lazy" src="./images/dest/index/experts__arrow.svg" alt="next">
+                        </button>
 
                       </div>
 
@@ -2200,6 +2214,8 @@
     </div>
   </nav>
   <!-- Mobile nav END -->
+
+  <script src="./js/include/glider.min.js"></script>
 
   <!-- Custom JS -->
   <script src="./js/app.min.js"></script>

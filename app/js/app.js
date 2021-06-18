@@ -91,68 +91,76 @@ document.addEventListener("DOMContentLoaded", function (event) {
     mask.classList.remove("mask--active");
   }
 
-  document.addEventListener("scroll", () => {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  // document.addEventListener("scroll", () => {
+  //   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    if (scrollTop > windowH) {
-      headerNav.classList.add("header__nav--scroll");
+  //   if (scrollTop > windowH) {
+  //     headerNav.classList.add("header__nav--scroll");
 
-      navItems.forEach((navItem) => {
-        navItem.addEventListener("mouseover", maskOpen);
+  //     navItems.forEach((navItem) => {
+  //       navItem.addEventListener("mouseover", maskOpen);
 
-        navItem.addEventListener("mouseout", maskHide);
-      });
-    } else {
-      headerNav.classList.remove("header__nav--scroll");
-      navInner.classList.remove("header__intro__nav--fixed");
-      headerBtnAbsolute.classList.remove("header__burger--active");
+  //       navItem.addEventListener("mouseout", maskHide);
+  //     });
+  //   } else {
+  //     headerNav.classList.remove("header__nav--scroll");
+  //     navInner.classList.remove("header__intro__nav--fixed");
+  //     headerBtnAbsolute.classList.remove("header__burger--active");
 
-      navItems.forEach((navItem) => {
-        navItem.removeEventListener("mouseover", maskOpen);
+  //     navItems.forEach((navItem) => {
+  //       navItem.removeEventListener("mouseover", maskOpen);
 
-        navItem.removeEventListener("mouseout", maskHide);
-      });
-    }
-  });
+  //       navItem.removeEventListener("mouseout", maskHide);
+  //     });
+  //   }
+  // });
 
   // Вкладки в футере
   const footerTitles = document.querySelectorAll(".footer__title");
-  footerTitles.forEach((footerTitle) => {
-    footerTitle.addEventListener("click", () => {
-      const parentFooterTitle = footerTitle.parentNode;
+  if (footerTitles) {
+    footerTitles.forEach((footerTitle) => {
+      footerTitle.addEventListener("click", () => {
+        const parentFooterTitle = footerTitle.parentNode;
 
-      parentFooterTitle.classList.toggle("footer__col--active");
+        parentFooterTitle.classList.toggle("footer__col--active");
+      });
     });
-  });
+  }
 
   // Мобильное меню
   const headerNavItemsWrapper = document.querySelectorAll(
     ".header__intro__nav__item__wrapper"
   );
-  headerNavItemsWrapper.forEach((headerNavItemWrapper) => {
-    headerNavItemWrapper.addEventListener("click", () => {
-      const cuurNavParent = headerNavItemWrapper.parentNode;
-      cuurNavParent.classList.toggle("header__intro__nav__item--active");
+  if (headerNavItemsWrapper) {
+    headerNavItemsWrapper.forEach((headerNavItemWrapper) => {
+      headerNavItemWrapper.addEventListener("click", () => {
+        const cuurNavParent = headerNavItemWrapper.parentNode;
+        cuurNavParent.classList.toggle("header__intro__nav__item--active");
+      });
     });
-  });
+  }
 
   // Открыть поиск
-  openSearch.addEventListener("click", (evt) => {
-    evt.preventDefault();
-    headerIntroCenter.classList.add("header__intro__center--active");
-    mask.classList.add("mask--active");
-    body.classList.add("fixed");
-  });
+  if (openSearch) {
+    openSearch.addEventListener("click", (evt) => {
+      evt.preventDefault();
+      headerIntroCenter.classList.add("header__intro__center--active");
+      mask.classList.add("mask--active");
+      body.classList.add("fixed");
+    });
+  }
 
   // Подсказки в поиске
-  searchInput.addEventListener("input", (evt) => {
-    evt.preventDefault();
-    searchHints.classList.add("search__hints--active");
+  if (searchInput) {
+    searchInput.addEventListener("input", (evt) => {
+      evt.preventDefault();
+      searchHints.classList.add("search__hints--active");
 
-    if (!searchInput.value) {
-      searchHints.classList.remove("search__hints--active");
-    }
-  });
+      if (!searchInput.value) {
+        searchHints.classList.remove("search__hints--active");
+      }
+    });
+  }
 
   function findAncestor(el, cls) {
     while ((el = el.parentElement) && !el.classList.contains(cls));
@@ -161,12 +169,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   // Табы в таблице рейтинга
   const ozorBtns = document.querySelectorAll(".obzor__open");
-  ozorBtns.forEach((ozorBtn) => {
-    ozorBtn.addEventListener("click", () => {
-      const currParentLine = findAncestor(ozorBtn, "best__table__line");
-      currParentLine.classList.toggle("best__table__line--active");
+  if (ozorBtns) {
+    ozorBtns.forEach((ozorBtn) => {
+      ozorBtn.addEventListener("click", () => {
+        const currParentLine = findAncestor(ozorBtn, "best__table__line");
+        currParentLine.classList.toggle("best__table__line--active");
+      });
     });
-  });
+  }
 
   // Slider
   if (document.querySelector(".experts__line")) {
@@ -200,11 +210,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
   const filterLinesWrapper = document.querySelectorAll(
     ".filter__line__wrapper"
   );
-  filterLinesWrapper.forEach((filterLine) => {
-    filterLine.addEventListener("click", () => {
-      filterLine.parentNode.classList.toggle("filter__line--active");
+  if (filterLinesWrapper) {
+    filterLinesWrapper.forEach((filterLine) => {
+      filterLine.addEventListener("click", () => {
+        filterLine.parentNode.classList.toggle("filter__line--active");
+      });
     });
-  });
+  }
 
   // Закрыть фильтр
   const closeFilter = document.querySelector("#closeFilter");
@@ -468,6 +480,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const bonusSortText = bonusSortItem.querySelector(".bonus__sort__text");
         bonusSortText.innerHTML = bonusSortMenuItem.innerHTML;
       });
+    });
+  }
+
+  if (document.querySelector("#appPhonesSlider")) {
+    new Glider(document.querySelector("#appPhonesSlider"), {
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      draggable: true,
+      dots: false,
+      arrows: false,
+      responsive: [
+        {
+          // screens greater than >= 775px
+          breakpoint: 767,
+          settings: {
+            arrows: {
+              prev: "#appPhonesPrev",
+              next: "#appPhonesNext",
+            },
+          },
+        },
+      ],
     });
   }
 });

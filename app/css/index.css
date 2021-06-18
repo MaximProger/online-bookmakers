@@ -1626,3 +1626,55 @@
     height: 80px;
   }
 }
+
+/* .btn__search {
+  margin-top: 30px;
+}
+
+.best__info__value {
+  word-wrap: break-word;
+  line-height: 1.2;
+}
+
+.app__intro__list__right {
+  text-align: right;
+}
+
+@media (max-width: 374px) {
+  .best__table__line__wrapper {
+    grid-template-columns: 24% 13% 18% 45%;
+  }
+
+  .best__table__item__wrapper {
+    width: 100%;
+  }
+
+  .best__table__obzor {
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  .best__obzor__descr {
+    margin-right: 5px;
+  }
+
+  .obzor__open {
+    margin-left: 5px;
+  }
+}
+
+@media (min-width: 992px) {
+  .forecasts-competitions-table-body-list-item-duel-enemy {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .forecasts-competitions-table-body-list-item-duel-enemy:first-of-type p {
+    width: 100%;
+    text-align: right;
+  }
+
+  .forecasts-competitions-table-body-list-item-duel-enemy:last-of-type p {
+    width: 100%;
+  } */

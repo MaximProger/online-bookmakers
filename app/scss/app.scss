@@ -209,6 +209,7 @@
 
 .app__intro__list {
   width: 359px;
+  min-width: 359px;
   background: rgba(131, 143, 192, 0.1);
   border: 1px solid #838fc0;
   box-sizing: border-box;
@@ -537,11 +538,26 @@
   max-height: 172.74px;
 }
 
-.app__intro__phones__wrapper {
+.app__intro__phones {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+
+  margin-left: 10px;
+}
+
+.app__intro__phones__wrapper {
+  max-width: 360px;
+  margin: 0 10px;
+
+  .glider-slide {
+    width: 100px;
+    min-width: 100px;
+  }
+
+  .glider-track {
+    gap: 30px;
+  }
 }
 
 @media (max-width: $tablet) {
@@ -651,6 +667,7 @@
   .app__intro__list {
     max-width: 320px;
     width: 100%;
+    min-width: auto;
     margin: 0 13.5px;
     padding: 15px 8px;
     margin-bottom: 20px;
@@ -838,8 +855,7 @@
   }
 
   .app__intro__phones {
-    padding-left: 13.5px;
-    overflow-x: scroll;
+    padding-left: 0;
 
     position: relative;
   }
@@ -851,6 +867,11 @@
 
     picture {
       display: block;
+    }
+
+    .glider-slide {
+      width: 113px;
+      min-width: 113px;
     }
   }
 
@@ -894,5 +915,9 @@
     top: 50%;
     transform: translate(0, -50%);
     background: linear-gradient(270deg, #203d5e 0%, rgba(32, 60, 94, 0) 100%);
+  }
+
+  .app__phones__btn {
+    display: none;
   }
 }
