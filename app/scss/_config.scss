@@ -24,10 +24,12 @@ $mobile-sm: 375px;
   }
 }
 
+@include font("Roboto", normal, 300, "../fonts/Roboto-Light.ttf");
 @include font("Roboto", normal, 400, "../fonts/Roboto-Regular.ttf");
 @include font("Roboto", italic, 400, "../fonts/Roboto-Italic.ttf");
 @include font("Roboto", normal, 500, "../fonts/Roboto-Medium.ttf");
 @include font("Roboto", normal, 700, "../fonts/Roboto-Bold.ttf");
+@include font("Roboto", normal, 900, "../fonts/Roboto-Black.ttf");
 
 // GENERAL DOCUMENT STYLES
 

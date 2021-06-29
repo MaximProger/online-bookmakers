@@ -504,4 +504,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
       ],
     });
   }
+
+  const sidebarNews = document.querySelectorAll(".sidebar__new--toggle");
+  sidebarNews.forEach((sidebarNew) => {
+    sidebarNew.addEventListener("click", () => {
+      const sidebarNewBody = sidebarNew.querySelector(".sidebar__new__body");
+      slideToggle(sidebarNewBody, 500);
+
+      if (sidebarNew.classList.contains("sidebar__new--simple")) {
+        sidebarNew.classList.toggle("sidebar__new--border");
+      }
+    });
+  });
 });
