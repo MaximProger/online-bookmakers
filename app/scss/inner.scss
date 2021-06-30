@@ -758,6 +758,12 @@
 
   .companies__logos__body {
     padding: 30px 14px 20px;
+
+    .companies__logos__col {
+      &:first-child {
+        margin-bottom: 36px;
+      }
+    }
   }
   // Companies__logos END
 }
@@ -771,4 +777,12 @@
     }
   }
   // Whole END
+}
+
+@media (max-width: $mobile-sm) {
+  // Companies__logos
+  .companies__logos__name {
+    font-size: 15px;
+  }
+  // Companies__logos END
 }

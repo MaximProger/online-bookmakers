@@ -506,6 +506,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 
   // Inner
+
   const sidebarNews = document.querySelectorAll(".sidebar__new--toggle");
   sidebarNews.forEach((sidebarNew) => {
     sidebarNew.addEventListener("mouseenter", () => {
