@@ -505,15 +505,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   }
 
+  // Inner
   const sidebarNews = document.querySelectorAll(".sidebar__new--toggle");
   sidebarNews.forEach((sidebarNew) => {
-    sidebarNew.addEventListener("click", () => {
+    sidebarNew.addEventListener("mouseenter", () => {
       const sidebarNewBody = sidebarNew.querySelector(".sidebar__new__body");
-      slideToggle(sidebarNewBody, 500);
+      slideDown(sidebarNewBody, 300);
 
       if (sidebarNew.classList.contains("sidebar__new--simple")) {
-        sidebarNew.classList.toggle("sidebar__new--border");
+        sidebarNew.classList.add("sidebar__new--border");
+      }
+    });
+
+    sidebarNew.addEventListener("mouseleave", () => {
+      const sidebarNewBody = sidebarNew.querySelector(".sidebar__new__body");
+      slideUp(sidebarNewBody, 300);
+
+      if (sidebarNew.classList.contains("sidebar__new--simple")) {
+        sidebarNew.classList.remove("sidebar__new--border");
       }
     });
   });
+  // Inner END
 });
