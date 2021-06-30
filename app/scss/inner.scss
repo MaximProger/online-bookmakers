@@ -34,9 +34,6 @@
 
 .companies__logos__body {
   padding: 40px;
-
-  & > .row {
-  }
 }
 
 .companies__logos__col {
@@ -138,10 +135,8 @@
     .sidebar__new__body {
       display: none;
 
-      &--special {
-        .sidebar__new__body__wrapper {
-          background: #1d2442;
-        }
+      .sidebar__new__body__wrapper {
+        background: #1d2442;
       }
     }
   }
@@ -200,14 +195,6 @@
 
     .sidebar__new__head {
       padding-top: 25px;
-    }
-
-    .sidebar__new__body__wrapper {
-      padding-bottom: 25px !important;
-    }
-
-    .sidebar__new__body__line {
-      padding: 0 !important;
     }
   }
 }
@@ -361,8 +348,6 @@
   &--special {
     .sidebar__new__body__wrapper {
       display: block;
-
-      padding: 12px;
     }
   }
 
@@ -378,8 +363,8 @@
   align-items: center;
   justify-content: space-between;
 
-  padding-top: 8px;
-  padding: 8px 12px 18px;
+  // padding-top: 8px;
+  // padding: 8px 12px 18px;
 }
 
 .sidebar__new__body__line {
@@ -387,17 +372,20 @@
   align-items: center;
   justify-content: space-between;
 
-  &:first-child {
-    padding-bottom: 12px;
-  }
+  padding: 17px 0;
+  margin: 0 12px;
 
-  &:nth-child(2) {
+  // &:first-child {
+  //   padding-bottom: 12px;
+  // }
+
+  &:nth-child(even) {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  &:last-child {
-    padding-top: 13px;
-  }
+  // &:last-child {
+  //   padding-top: 13px;
+  // }
 }
 
 .sidebar__new__btns {
