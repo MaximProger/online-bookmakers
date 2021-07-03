@@ -1113,6 +1113,14 @@
   // Companies__logos END
 
   // Bookmaker Table
+  .bookmaker__table__bonus__value {
+    font-size: 14px;
+  }
+
+  .bookmaker__table__apps {
+    gap: 0 4px;
+  }
+
   .bookmaker__table__bonus {
     justify-content: flex-end;
   }
@@ -1138,12 +1146,20 @@
   // Companies__logos END
 
   // Bookmaker Table
-  .bookmaker__table__apps {
-    gap: 0 2px;
+  .bookmaker__table__table {
+    &--special {
+      .bookmaker__table__grid {
+        grid-template-columns: 31% 21% 12% 36%;
+      }
+    }
   }
 
-  .bookmaker__table__apps__icon {
-    max-width: 13px;
+  .bookmaker__table__grid {
+    grid-template-columns: 31% 21% 12% 36%;
+  }
+
+  .bookmaker__table__apps {
+    gap: 0 2px;
   }
   // Bookmaker Table END
 }
