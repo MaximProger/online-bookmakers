@@ -973,8 +973,16 @@
   }
 
   .bookmaker__table__header {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+
     &.no-md {
       display: none;
+    }
+
+    .bookmaker__table__grid {
+      grid-template-columns: 100%;
     }
   }
 
@@ -1036,6 +1044,11 @@
     margin-bottom: 20px;
 
     &--special {
+      .bookmaker__table__line {
+        &:first-child {
+          border-radius: 0px;
+        }
+      }
       .bookmaker__table__grid {
         grid-template-columns: 32% 22% 10% 36%;
       }
