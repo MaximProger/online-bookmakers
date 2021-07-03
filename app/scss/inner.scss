@@ -1044,6 +1044,10 @@
     margin-bottom: 20px;
 
     &--special {
+      .bookmaker__table__header {
+        border-radius: 10px 10px 0 0;
+      }
+
       .bookmaker__table__line {
         &:first-child {
           border-radius: 0px;
