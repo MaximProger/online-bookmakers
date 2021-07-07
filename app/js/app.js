@@ -528,4 +528,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     });
   });
   // Inner END
+
+  // Mobile Nav
+  const navMobileItems = document.querySelectorAll("li.nav__mobile__item");
+  navMobileItems.forEach((navMobileItem) => {
+    navMobileItem.addEventListener("click", (evt) => {
+      navMobileItem.classList.toggle("nav__mobile__item--active");
+    });
+  });
 });
