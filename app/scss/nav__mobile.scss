@@ -1,175 +1,3 @@
-// .nav__mobile__item__inner {
-//   font-size: 14px;
-//   line-height: 16px;
-
-//   position: relative;
-
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between;
-
-//   height: 36px;
-//   padding: 0 14px;
-
-//   text-decoration: none;
-//   transition: all 0.2s linear;
-//   cursor: pointer;
-//   user-select: none;
-
-//   color: #fff;
-//   background: #242c4f;
-
-//   &:hover {
-//     background: #2f3962;
-
-//     .nav__mobile__item__icon {
-//       path {
-//         fill: #fff;
-//       }
-//     }
-//   }
-
-//   &::before {
-//     position: absolute;
-//     left: 0;
-//     top: 0;
-
-//     height: 100%;
-//     width: 4px;
-
-//     content: "";
-//     transition: all 0.2s linear;
-
-//     opacity: 0;
-//     background: #69a5ff;
-//     border-radius: 0px 10px 10px 0px;
-//   }
-
-//   &--active {
-//     background: #1b213b;
-
-//     &::before {
-//       opacity: 1;
-//     }
-
-//     .nav__mobile__item__btn {
-//       transform: rotate(-180deg);
-
-//       &--dots {
-//         transform: rotate(0);
-//       }
-
-//       path {
-//         fill: #fff;
-//       }
-
-//       circle {
-//         fill: #fff;
-//       }
-//     }
-
-//     & ~ .nav__mobile__inner__list {
-//       display: block;
-//     }
-
-//     .nav__mobile__item__icon {
-//       path {
-//         fill: #fff;
-//       }
-//     }
-//   }
-// }
-
-// .nav__mobile__item {
-//   display: block;
-// }
-
-// // .nav__mobile__list ~ .nav__mobile__item--active {
-// //   background: #1d2442;
-
-// //   &::before {
-// //     opacity: 0;
-// //   }
-
-// //   .nav__mobile__item__icon {
-// //     path {
-// //       fill: #69a5ff;
-// //     }
-// //   }
-// // }
-
-// .nav__mobile__item__icon {
-//   margin-right: 15px;
-
-//   path {
-//     transition: all 0.2s linear;
-//   }
-// }
-
-// .nav__mobile__item__content {
-//   display: flex;
-//   align-items: center;
-//   justify-content: flex-start;
-// }
-
-// .nav__mobile__item__btn {
-//   padding: 0;
-
-//   transition: all 0.2s linear;
-//   user-select: none;
-
-//   background: none;
-//   border: none;
-
-//   path {
-//     transition: all 0.2s linear;
-//   }
-
-//   circle {
-//     transition: all 0.2s linear;
-//   }
-// }
-
-// .nav__mobile__inner__list {
-//   .nav__mobile__item {
-//     height: 29px;
-
-//     background: #1d2442;
-
-//     &:hover {
-//       background: #2f3962;
-//     }
-//   }
-// }
-
-// .nav__mobile__inner__list {
-//   display: none;
-// }
-
-// .nav__mobile__inner__list {
-//   .nav__mobile__inner__list {
-//     .nav__mobile__item {
-//       padding-left: 24px;
-//       background: #242c4f;
-
-//       &:hover {
-//         background: #2f3962;
-//       }
-//     }
-//   }
-// }
-
-// .nav__mobile__wrapper {
-//   &--special {
-//     .nav__mobile__item__wrapper {
-//       .nav__mobile__item {
-//         height: 40px;
-//         padding-left: 35px;
-//       }
-//     }
-//   }
-// }
-
 .nav__menu__item {
   font-size: 14px;
   line-height: 16px;
@@ -230,6 +58,7 @@
 
   &--active {
     background: #1b213b;
+    border-color: rgba(131, 143, 192, 0.1);
 
     &::before {
       opacity: 1;
@@ -261,16 +90,17 @@
       }
     }
   }
-}
 
-a.nav__menu__item--active {
-  &::before {
-    opacity: 0;
+  &--special {
+    height: 40px !important;
+    padding-left: 35px;
   }
 }
 
 .nav__mobile__item__btn {
   line-height: 0;
+
+  display: inline-block;
 
   padding: 0;
 
@@ -305,7 +135,7 @@ a.nav__menu__item--active {
   .nav__menu__ul__drop {
     .nav__menu__item {
       padding-left: 24px;
-      background: #242c4f;
+      background: #242a47;
 
       &:hover {
         background: #2f3962;
