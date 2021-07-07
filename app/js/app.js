@@ -530,10 +530,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
   // Inner END
 
   // Mobile Nav
-  const navMobileItems = document.querySelectorAll("li.nav__mobile__item");
+  const navMobileItems = document.querySelectorAll(".nav__menu__item");
   navMobileItems.forEach((navMobileItem) => {
     navMobileItem.addEventListener("click", (evt) => {
-      navMobileItem.classList.toggle("nav__mobile__item--active");
+      navMobileItem.classList.toggle("nav__menu__item--active");
     });
   });
 });
