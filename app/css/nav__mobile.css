@@ -1,4 +1,4 @@
-.nav__mobile__item {
+.nav__menu__item {
   font-size: 14px;
   line-height: 16px;
   position: relative;
@@ -24,14 +24,21 @@
   user-select: none;
   color: #fff;
   background: #242c4f;
+  border-bottom: 1px solid transparent;
 }
-.nav__mobile__item:hover {
+.nav__menu__item:hover {
   background: #2f3962;
 }
-.nav__mobile__item:hover .nav__mobile__item__icon path {
+.nav__menu__item:hover .nav__mobile__item__icon path {
   fill: #fff;
 }
-.nav__mobile__item::before {
+.nav__menu__item:hover .nav__mobile__item__btn path {
+  fill: #fff;
+}
+.nav__menu__item:hover .nav__mobile__item__btn circle {
+  fill: #fff;
+}
+.nav__menu__item::before {
   position: absolute;
   left: 0;
   top: 0;
@@ -45,54 +52,42 @@
   background: #69a5ff;
   border-radius: 0 10px 10px 0;
 }
-.nav__mobile__item--active {
+.nav__menu__item--active {
   background: #1b213b;
+  border-color: rgba(131, 143, 192, 0.1);
 }
-.nav__mobile__item--active::before {
+.nav__menu__item--active::before {
   opacity: 1;
 }
-.nav__mobile__item--active .nav__mobile__item__btn {
+.nav__menu__item--active .nav__mobile__item__btn {
   -webkit-transform: rotate(-180deg);
   -ms-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
-.nav__mobile__item--active .nav__mobile__item__btn--dots {
+.nav__menu__item--active .nav__mobile__item__btn--dots {
   -webkit-transform: rotate(0);
   -ms-transform: rotate(0);
   transform: rotate(0);
 }
-.nav__mobile__item--active .nav__mobile__item__btn path {
+.nav__menu__item--active .nav__mobile__item__btn path {
   fill: #fff;
 }
-.nav__mobile__item--active .nav__mobile__item__btn circle {
+.nav__menu__item--active .nav__mobile__item__btn circle {
   fill: #fff;
 }
-.nav__mobile__item--active ~ .nav__mobile__item__wrapper {
+.nav__menu__item--active ~ .nav__menu__ul__drop {
   display: block;
 }
-.nav__mobile__item--active .nav__mobile__item__icon path {
+.nav__menu__item--active .nav__mobile__item__icon path {
   fill: #fff;
 }
-.nav__mobile__item__icon {
-  margin-right: 15px;
-}
-.nav__mobile__item__icon path {
-  -webkit-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-}
-.nav__mobile__item__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+.nav__menu__item--special {
+  height: 40px !important;
+  padding-left: 35px;
 }
 .nav__mobile__item__btn {
+  line-height: 0;
+  display: inline-block;
   padding: 0;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
@@ -114,24 +109,39 @@
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
-.nav__mobile__inner__list .nav__mobile__item {
+.nav__menu__ul__drop {
+  display: none;
+}
+.nav__menu__ul__drop .nav__menu__item {
   height: 29px;
   background: #1d2442;
 }
-.nav__mobile__inner__list .nav__mobile__item:hover {
+.nav__menu__ul__drop .nav__menu__item:hover {
   background: #2f3962;
 }
-.nav__mobile__item__wrapper {
-  display: none;
-}
-.nav__mobile__inner__list .nav__mobile__inner__list .nav__mobile__item {
+.nav__menu__ul__drop .nav__menu__ul__drop .nav__menu__item {
   padding-left: 24px;
-  background: #242c4f;
+  background: #242a47;
 }
-.nav__mobile__inner__list .nav__mobile__inner__list .nav__mobile__item:hover {
+.nav__menu__ul__drop .nav__menu__ul__drop .nav__menu__item:hover {
   background: #2f3962;
 }
-.nav__mobile__wrapper--special .nav__mobile__item__wrapper .nav__mobile__item {
-  height: 40px;
-  padding-left: 35px;
+.nav__menu__item__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+.nav__mobile__item__icon {
+  margin-right: 15px;
+}
+.nav__mobile__item__icon path {
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
