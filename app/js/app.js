@@ -553,4 +553,44 @@ document.addEventListener("DOMContentLoaded", function (event) {
       });
     });
   }
+
+  // Payments Slider
+  const officeSliders = document.querySelectorAll(".office__payments__slider");
+  if (officeSliders) {
+    officeSliders.forEach((officeSlider) => {
+      const officePaymentsWrapper = findAncestor(
+        officeSlider,
+        "office__payments__wrapper"
+      );
+      const sliderBtnPrev = officePaymentsWrapper.querySelector(
+        ".office__payments__slider__btn--prev"
+      );
+      const sliderBtnNext = officePaymentsWrapper.querySelector(
+        ".office__payments__slider__btn--next"
+      );
+
+      new Glider(officeSlider, {
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        draggable: true,
+        dots: false,
+        duration: 0.25,
+        arrows: {
+          prev: sliderBtnPrev,
+          next: sliderBtnNext,
+        },
+        responsive: [
+          {
+            // screens greater than >= 1024px
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 6,
+              slidesToScroll: 1,
+              duration: 1,
+            },
+          },
+        ],
+      });
+    });
+  }
 });
