@@ -536,4 +536,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
       navMobileItem.classList.toggle("nav__menu__item--active");
     });
   });
+
+  // Сортировка. Показать скрытые.
+  const sortMoreBtn = document.querySelector("#sortMoreBtn");
+  if (sortMoreBtn) {
+    sortMoreBtn.addEventListener("click", (evt) => {
+      evt.preventDefault();
+      sortMoreBtn.style.display = "none";
+      const bonusSort = findAncestor(sortMoreBtn, "bonus__sort");
+      const hiddenSortItems = bonusSort.querySelectorAll(
+        ".bonus__sort__item--hidden"
+      );
+
+      hiddenSortItems.forEach((hiddenSortItem) => {
+        hiddenSortItem.classList.remove("bonus__sort__item--hidden");
+      });
+    });
+  }
 });
