@@ -593,4 +593,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
       });
     });
   }
+
+  if (document.querySelector("#infoPaymentsSlider")) {
+    new Glider(document.querySelector("#infoPaymentsSlider"), {
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      draggable: true,
+      dots: false,
+      duration: 0.25,
+      arrows: {
+        prev: "#infoBtnPrev",
+        next: "#infoBtnNext",
+      },
+    });
+  }
 });

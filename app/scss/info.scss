@@ -1,0 +1,352 @@
+.btn--outline {
+  border: 1px solid $blue;
+  background: none;
+
+  &:hover {
+    background: $blue;
+  }
+}
+
+// Info
+
+.info {
+  position: relative;
+
+  padding: 18px 0;
+
+  background: linear-gradient(270.43deg, #00a2b5 0%, #8226b7 100%),
+    linear-gradient(270.43deg, #00a2b5 0%, #8226b7 100%), #8226b7;
+}
+
+.info__mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(36, 44, 79, 0.85);
+}
+
+.info__content {
+  position: relative;
+  z-index: 2;
+}
+
+.info__bookmaker__logo {
+  display: block;
+
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 27px;
+
+  transition: all 0.2s linear;
+  text-decoration: none;
+
+  filter: drop-shadow(0px 4px 20px #69a5ff);
+
+  &:hover {
+    filter: none;
+  }
+}
+
+.info__bookmaker__description {
+  margin-bottom: 33px;
+
+  .office__item__description__item {
+    font-size: 15px;
+    line-height: 18px;
+
+    padding: 0;
+    height: auto;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .office__item__reviews__values {
+    gap: 0;
+  }
+
+  .rating__recall__item {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.info__bookmaker__bonus {
+  font-size: 15px;
+  line-height: 140%;
+
+  justify-content: center !important;
+  align-items: center !important;
+
+  padding: 8px 0;
+  margin-bottom: 23px;
+
+  letter-spacing: -0.2px;
+  text-decoration: none;
+  transition: all 0.2s linear;
+
+  background: rgba($color: $blue, $alpha: 0.1);
+  color: #fff;
+
+  &:hover {
+    background: rgba($color: $blue, $alpha: 0.3);
+  }
+
+  .infopage__banner__number__img {
+    margin-right: 12px;
+  }
+
+  .infopage__banner__number__line {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+
+    margin-bottom: 0;
+  }
+}
+
+.info__bookmaker__btn {
+  width: 100%;
+  height: 50px;
+}
+
+.info__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+  padding-left: 35px;
+}
+
+.info__col {
+  max-width: 259px;
+  width: 100%;
+
+  &--small {
+    max-width: 180px;
+  }
+
+  &--special {
+    .info__col__wrapper {
+      padding-left: 11px;
+      padding-right: 8px;
+    }
+
+    .info__col__title {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.info__col__title {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 140%;
+
+  margin-bottom: 10px;
+}
+
+.info__col__wrapper {
+  &--special {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+
+    background: rgba(36, 44, 79, 0.5);
+    border-radius: 10px;
+
+    .info__col__description {
+      font-weight: 400;
+
+      color: #ffffff;
+    }
+  }
+}
+
+.info__col__item {
+  font-size: 14px;
+  line-height: 140%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--special {
+    padding-bottom: 2px;
+    margin-bottom: 8px;
+
+    border-bottom: 1px solid rgba(131, 143, 192, 0.5);
+
+    .info__col__description {
+      color: $blue;
+    }
+  }
+}
+
+.info__col__description {
+  font-weight: 500;
+
+  color: $blue;
+}
+
+.info__mid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 19px;
+}
+
+.info__payments {
+  .office__payments__title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 140%;
+
+    padding-left: 35px;
+    margin-bottom: 9px;
+
+    color: #fff;
+  }
+}
+
+.info__payments__slider {
+  max-width: 335px;
+  width: 100%;
+  margin: 0 17px;
+
+  .glider-track {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.info__banner__number {
+  font-size: 16px;
+  line-height: 120%;
+
+  align-items: center !important;
+
+  letter-spacing: -0.2px;
+}
+
+.info__banner__reviews {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .infopage__banner__reviews__list {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+}
+
+.info__bot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-left: 35px;
+}
+
+.info__go__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 513px;
+  width: 100%;
+  height: 50px;
+}
+
+.info__bet__btn {
+  max-width: 284px;
+  width: 100%;
+  height: 50px;
+}
+// Info END
+
+// Sidebar
+.sidebar {
+  &--nav {
+    .sidebar__line {
+      justify-content: space-between;
+
+      height: 40px;
+
+      text-decoration: none;
+
+      color: #fff;
+
+      &:first-child {
+        border-radius: 10px 10px 0px 0px;
+      }
+
+      &:last-child {
+        border-radius: 0px 0px 10px 10px;
+      }
+
+      &:hover {
+        .offical__go__symbol {
+          background: url(../images/dest/info/sidebar__arrow--hover.svg)
+            no-repeat center;
+        }
+
+        .sidebar__nav__text {
+          color: $blue;
+        }
+      }
+    }
+
+    .offical__go__symbol {
+      transition: all 0.2s linear;
+
+      background: url(../images/dest/info/sidebar__arrow.svg) no-repeat center;
+    }
+  }
+}
+
+.sidebar__nav__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.sidebar__nav__logo {
+  margin-right: 12px;
+}
+
+.sidebar__nav__text {
+  font-size: 15px;
+  line-height: 140%;
+
+  transition: all 0.2s linear;
+}
+// Sidebar END
