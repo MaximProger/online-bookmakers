@@ -596,7 +596,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   if (document.querySelector("#infoPaymentsSlider")) {
     new Glider(document.querySelector("#infoPaymentsSlider"), {
-      slidesToShow: 5,
+      slidesToShow: 3,
       slidesToScroll: 1,
       draggable: true,
       dots: false,
@@ -605,6 +605,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
         prev: "#infoBtnPrev",
         next: "#infoBtnNext",
       },
+      responsive: [
+        {
+          // screens greater than >= 374px
+          breakpoint: 374,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            duration: 1,
+          },
+        },
+        {
+          // screens greater than >= 1199px
+          breakpoint: 1199,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            duration: 1,
+          },
+        },
+      ],
     });
   }
 });
