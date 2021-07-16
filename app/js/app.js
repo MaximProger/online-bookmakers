@@ -627,4 +627,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
       ],
     });
   }
+
+  const infoColBoxTab = document.querySelector("#infoColBoxTab");
+  if (infoColBoxTab) {
+    infoColBoxTab.addEventListener("click", (evt) => {
+      evt.preventDefault();
+      console.log(123);
+      const infoColBox = findAncestor(infoColBoxTab, "info__col__box");
+      infoColBox.classList.toggle("info__col__box--active");
+    });
+  }
 });

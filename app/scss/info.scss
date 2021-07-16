@@ -154,6 +154,23 @@
   padding-left: 35px;
 }
 
+.info__col__box {
+  width: 100%;
+}
+
+.info__col__box__wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  .info__col {
+    &:first-child {
+      margin-right: 62px;
+      margin-left: 10px;
+    }
+  }
+}
+
 .info__col {
   max-width: 259px;
   width: 100%;
@@ -455,6 +472,38 @@
   background: $blue;
   border-radius: 5px;
 }
+
+.info__col__box__tab {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 14px;
+
+  background: $blue_dark;
+}
+
+.info__col__box__tab__btn {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 140%;
+
+  text-decoration: underline;
+
+  color: #fff;
+}
+
+.info__col__box__tab__arrow {
+  display: inline-block;
+
+  width: 14px;
+  height: 8px;
+
+  transition: all 0.2s linear;
+  transform: rotate(-180deg);
+
+  background: url("../images/dest/info/tab__arrow.svg") no-repeat center;
+}
 // Info END
 
 // Sidebar
@@ -673,22 +722,16 @@
   .info__top {
     flex-wrap: wrap;
 
-    padding-left: 14px;
-    padding-right: 14px;
+    // padding-left: 14px;
+    // padding-right: 14px;
+    padding: 0;
     margin-bottom: 22px;
   }
 
   .info__col {
     max-width: 100%;
-    &:first-child {
-      margin-bottom: 19px;
-    }
-
-    &:nth-child(2),
-    &:nth-child(3) {
-      width: 49%;
-      max-width: 49%;
-    }
+    padding-left: 14px;
+    padding-right: 14px;
 
     &--special {
       .info__col__wrapper {
@@ -710,6 +753,9 @@
   }
 
   .info__col__item {
+    font-size: 13px;
+    line-height: 130%;
+
     &--special {
       padding-top: 2px;
       padding-left: 8px;
@@ -864,6 +910,47 @@
 
     color: #838fc0;
   }
+
+  .info__col__box {
+    margin-top: 19px;
+  }
+
+  .info__col__box__wrapper {
+    display: none;
+
+    justify-content: space-between;
+
+    margin-top: 19px;
+    padding-left: 14px;
+    padding-right: 14px;
+
+    .info__col {
+      width: 48%;
+      max-width: 48%;
+      padding: 0;
+
+      &:first-child {
+        margin-right: 0px;
+        margin-left: 0px;
+      }
+    }
+  }
+
+  .info__col__box {
+    &--active {
+      .info__col__box__wrapper {
+        display: flex;
+      }
+
+      .info__col__box__tab__arrow {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  .info__col__box__tab {
+    display: flex;
+  }
 }
 
 @media (max-width: $mobile-sm) {
@@ -885,6 +972,14 @@
   .info__bookmaker__btn {
     max-width: 155px;
     height: 40px;
+  }
+
+  .info__col {
+    &:nth-child(2),
+    &:nth-child(3) {
+      width: 49%;
+      max-width: 49%;
+    }
   }
 
   .info__col__item {
