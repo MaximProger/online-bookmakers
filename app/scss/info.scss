@@ -155,20 +155,20 @@
 }
 
 .info__col__box {
-  width: 100%;
+  width: 58%;
 }
 
 .info__col__box__wrapper {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: space-between;
 
-  .info__col {
-    &:first-child {
-      margin-right: 62px;
-      margin-left: 10px;
-    }
-  }
+  // .info__col {
+  //   &:first-child {
+  //     margin-right: 62px;
+  //     margin-left: 10px;
+  //   }
+  // }
 }
 
 .info__col {
@@ -937,6 +937,8 @@
   }
 
   .info__col__box {
+    width: 100%;
+
     &--active {
       .info__col__box__wrapper {
         display: flex;
